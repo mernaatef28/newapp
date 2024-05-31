@@ -16,60 +16,72 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text("title")),
         body: Column(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => YellowPage()),
-                );
-              },
-              child: Container(
-                width: 200,
-                height: 150,
-                color: Colors.yellow,
-                margin: const EdgeInsets.only(right: 10.0),
-              ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      
+                      MaterialPageRoute(builder: (context) => YellowPage()),
+                    );
+                  },
+                  child: Container(
+                    width: 200,
+                    height: 150,
+                    color: Colors.yellow,
+                    margin: const EdgeInsets.only(right: 10.0),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      
+                      MaterialPageRoute(builder: (context) => RedPage()),
+                    );
+                  },
+                  child: Container(
+                    width: 200,
+                    height: 150,
+                    color: Colors.red,
+                  ),
+                ),
+              ],
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RedPage()),
-                );
-              },
-              child: Container(
-                width: 200,
-                height: 150,
-                color: Colors.red,
-              ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      
+                      MaterialPageRoute(builder: (context) => OrangePage()),
+                    );
+                  },
+                  child: Container(
+                    width: 200,
+                    height: 150,
+                    color: Colors.orange,
+                    margin: const EdgeInsets.only(top: 10.0, left: 100),
+                  ),
+                ),
+              ],
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => OrangePage()),
-                );
-              },
-              child: Container(
-                width: 200,
-                height: 150,
-                color: Colors.orange,
-                margin: const EdgeInsets.only(top: 10.0, left: 100),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => BluePage()),
-                );
-              },
-              child: Container(
-                width: 410,
-                height: 150,
-                color: Colors.blue,
-                margin: const EdgeInsets.only(top: 10.0),
-              ),
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      
+                      MaterialPageRoute(builder: (context) => BluePage()),
+                    );
+                  },
+                  child: Container(
+                    width: 410,
+                    height: 150,
+                    color: Colors.blue,
+                    margin: const EdgeInsets.only(top: 10.0),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
